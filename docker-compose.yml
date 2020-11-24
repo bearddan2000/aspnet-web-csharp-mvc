@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  webapp:
+    container_name: "webapp"
+    image: junalmeida/mono-web:latest
+    build:
+      context: .
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./pools:/etc/mono/pools
